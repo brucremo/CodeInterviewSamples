@@ -18,8 +18,6 @@ function countGroups(related) {
     // O (V+E) Vertices + Edges
     // O (V) Space because we count the nodes (Vertices)
     for (var row = 0; row < related.length; row++){
-        
-        console.log(visitedNodes[row])
         if(visitedNodes[row] == undefined){
             dfs(related, visitedNodes, row);
             groups++;
