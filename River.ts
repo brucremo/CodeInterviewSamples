@@ -25,7 +25,7 @@ export function getRiverSizeBFS(
 	sizes: number[]
 ) {
 	let riverSize: number = 0;
-	// Queue with X:Y indexes to process
+	// Stack with X:Y indexes to process
 	let stack = [[i, j]];
 	
 	while(stack.length != 0){

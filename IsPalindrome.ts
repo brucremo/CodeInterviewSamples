@@ -22,3 +22,22 @@ function isPalindrome(s: string): boolean {
     
     return true;
 };
+
+
+export function isPalindrome2(string: string) {
+	// Transform string into array to facilitate iteration
+  let strArray: string[] = Array.from(string);
+	
+	// Take right & left string positions for comparison
+	let right: number = string.length - 1;
+	let left: number = 0;
+	
+	// Iterate thru array, if char at equivalent positions is not the same, it's not a palindrome
+	while(right >= left){
+		if(strArray[right] != strArray[left]) return false;
+		right--;
+		left++;
+	}
+	
+	return true;
+}
